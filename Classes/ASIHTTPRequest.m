@@ -3174,6 +3174,7 @@ static NSOperationQueue *sharedQueue = nil;
 
 #pragma mark stream status handlers
 
+/////////////
 - (void)handleNetworkEvent:(CFStreamEventType)type
 {	
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -3242,7 +3243,7 @@ static NSOperationQueue *sharedQueue = nil;
 	}
 	return false;
 }
-
+//////////////////
 - (void)handleBytesAvailable
 {
 	if (![self responseHeaders]) {
@@ -3700,7 +3701,7 @@ static NSOperationQueue *sharedQueue = nil;
 		[self setReadStream:nil];
     }	
 }
-
+////////////////  .......
 - (void)scheduleReadStream
 {
 	if ([self readStream] && ![self readStreamIsScheduled]) {
